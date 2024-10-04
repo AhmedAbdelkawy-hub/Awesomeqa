@@ -45,7 +45,7 @@ To set up the Awesomeqa application locally, follow these steps:
 
 ### Local testing execution example
 
-![Local testing execution example](Awesomeqa Project video.gif)
+![Local testing execution example](AwesomeqaProjectVideo.gif)
 
 
 ## Contributing
