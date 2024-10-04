@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OpenCart">
+    <parameter name="browsername" value=""/>
+
+    <test name="Register User With Valid Data">
+
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateRegisterPage"/>
+                </methods>
+            </class>
+            <class name="testcases.TC02_Register">
+                <methods>
+                    <include name="VerifyRegisterWithValidData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="Login With Valid Data">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateLoginPage"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC03_Login">
+                <methods>
+                    <include name="VerifyLoginWithValidData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+    <test name="ForgetPasswordFunction">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateLoginPage"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC03_Login">
+                <methods>
+                    <include name="VerifyOpenForgetPasswordPage"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC04_ForgetPassword">
+                <methods>
+                    <include name="VerifyForgetPasswordFunction"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+    <test name="SearchForProducts">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateLoginPage"/>
+                </methods>
+            </class>
+            <class name="testcases.TC03_Login">
+                <methods>
+                    <include name="VerifyLoginWithValidData"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC05_Account">
+                <methods>
+                    <include name="VerifySearchForProducts"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+
+
+    <test name="HoverMainTabsByLoggedUser">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateLoginPage"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="VerifyHoverMenusMainLinks"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+    <test name="HoverOnMainAndSubCategoryByLoggedUser">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateLoginPage"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="VerifyHoverMenusLinksAndSubCategory"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+
+
+
+    <test name="AddProductToCart">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateLoginPage"/>
+                </methods>
+            </class>
+
+
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="VerifyAddingItemToCart"/>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+
+    <test name="AddProductToWishList">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateLoginPage"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="VerifyAddingItemToWishList"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="AddProductToComparisonList">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateLoginPage"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="VerifyAddingItemToComparisonList"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+
+
+
+
+
+    <test name="Create successful Order">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateLoginPage"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="VerifyAddingItemToCart"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="VerifyOpenCheckOutPage"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC06_CheckOut">
+                <methods>
+                    <include name="VerifyCreateSuccessOder"/>
+                </methods>
+            </class>
+
+        </classes>
+
+    </test>
+
+
+
+
+
+
+
+
+
+
+
+    <test name="Register User With InValid Data">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateRegisterPage"/>
+                </methods>
+            </class>
+            <class name="testcases.TC02_Register">
+                <methods>
+                    <include name="VerifyRegisterWithInValidEmail"/>
+                    <include name="VerifyRegisterWithInvalidPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Login With InValid Data">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateLoginPage"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC03_Login">
+                <methods>
+                    <include name="VerifyLoginWithInValidEmail"/>
+                    <include name="VerifyLoginWithInValidPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

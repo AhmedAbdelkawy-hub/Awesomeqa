@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Register User With InValid Data">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateRegisterPage"/>
+                </methods>
+            </class>
+            <class name="testcases.TC02_Register">
+                <methods>
+                    <include name="VerifyRegisterWithInValidEmail"/>
+                    <include name="VerifyRegisterWithInvalidPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Login With InValid Data">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateLoginPage"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC03_Login">
+                <methods>
+                    <include name="VerifyLoginWithInValidEmail"/>
+                    <include name="VerifyLoginWithInValidPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OpenCart">
+    <parameter name="browsername" value=""/>
+    <test name="Register User With Valid Data">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateRegisterPage"/>
+                </methods>
+            </class>
+            <class name="testcases.TC02_Register">
+                <methods>
+                    <include name="VerifyRegisterWithValidData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="Create successful Order">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateLoginPage"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="VerifyAddingItemToCart"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="VerifyOpenCheckOutPage"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC06_CheckOut">
+                <methods>
+                    <include name="VerifyCreateSuccessOder"/>
+                </methods>
+            </class>
+
+        </classes>
+
+    </test>
+
+
+</suite>
